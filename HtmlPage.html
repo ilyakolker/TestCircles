@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Design.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="Profiles.js"></script>
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+            i = 0;
+                var Addcircle_btn = document.getElementById("Addcircle_btn");
+                Addcircle_btn.addEventListener("click", MakeACircle, false);
+                Light = "off";
+            
+
+        });
+
+        
+        var ClassA = function () {
+            this.name = "class A";
+        }
+
+        ClassA.prototype.print = function () {
+            console.log(this.name);
+        }
+
+        var a = new ClassA();
+
+        a.print();
+
+
+
+
+        function MakeACircle() {
+
+            var profiles = Profilebulider();
+
+
+            profiles.forEach(function (vale, index) {
+
+                if (vale.Categoty == "Math") {
+                    var div = document.getElementById("Svg");
+                    var txt = "name: " + vale.name + "category: " + vale.Categoty;
+                    var txtTag = "<text x='35%' y='" + (35 + i) + "'" + " font-family='arial' font-size='10'>" + txt + "</text>";
+                    var circle = "<circle aligen='center' cx='50%' cy='" + (i + 55) + "'" + " r='50' fill='red'/>";
+                    div.innerHTML += circle + txtTag;
+                    i += 110;
+                }
+            });
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="Addcircle_btn" class="blue">
+        <p style="top:10px; position:relative">Math</p>
+    </div>
+    <div class="sVGC">
+        <svg  id="Svg" height="90%" width="50%" class="c" >
+        </svg>
+    </div>
+</body>
+</html>

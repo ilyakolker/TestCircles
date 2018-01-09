@@ -1,0 +1,23 @@
+﻿html, body {
+	height: 100%;
+}
+
+.blue {
+	background-color: blue;
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	margin: auto auto;
+	text-align: center;
+}
+
+.sVGC {
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.c {
+	display: block;
+	margin: 0 auto;
+}
